@@ -18,6 +18,23 @@ type Planet =
         DistanceParsecs: float
     }
 
+type SortMode =
+    | Distance
+    | OrbitalPeriod
+    | PlanetRadius
+    | DiscoveryYear
+
+Type SearchCriteria =
+    {
+        MaximumDistanceParsecs: float option
+        MinimumDiscoveryYear: int option
+        MinimumRadiusEarths: float option
+        MaximumRadiusEarths: float option
+        MaximumOrbitalPeriodDays: float option
+        DiscoveryMethod: string option
+        SortBy: SortMode
+    }   
+
 let query =
     "SELECT TOP 5 pl_name, hostname, pl_orbper, sy_dist " +
     "FROM pscomppars " +
@@ -55,6 +72,9 @@ let fetchPlanets () =
         else
             return planets
     }
+
+let 
+
 
 [<EntryPoint>]
 let main _ =
