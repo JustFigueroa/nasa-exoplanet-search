@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="nasa-exoplanets">
+    <resource name="FSharpSignatureData.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpOptimizationData.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.nasa-exoplanets" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.nasa-exoplanets" action="remove"></resource>
+  </assembly>
+</linker>
