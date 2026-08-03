@@ -27,3 +27,4 @@
 /Users/justinfigueroa/Desktop/workspace/nasa-exoplanets/obj/Debug/net10.0/nasa-exoplanets.pdb
 /Users/justinfigueroa/Desktop/workspace/nasa-exoplanets/obj/Debug/net10.0/nasa-exoplanets.genruntimeconfig.cache
 /Users/justinfigueroa/Desktop/workspace/nasa-exoplanets/obj/Debug/net10.0/ref/nasa-exoplanets.dll
+/Users/justinfigueroa/Desktop/workspace/nasa-exoplanets/obj/Debug/net10.0/nasa-exoplanets.sourcelink.json

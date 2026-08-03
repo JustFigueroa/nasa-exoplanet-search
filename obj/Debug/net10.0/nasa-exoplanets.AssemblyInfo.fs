@@ -10,7 +10,7 @@ open System.Reflection
 [<assembly: System.Reflection.AssemblyCompanyAttribute("nasa-exoplanets")>]
 [<assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")>]
 [<assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")>]
-[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")>]
+[<assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cd5f2980049a8dd688f799b0a07175f308377dd")>]
 [<assembly: System.Reflection.AssemblyProductAttribute("nasa-exoplanets")>]
 [<assembly: System.Reflection.AssemblyTitleAttribute("nasa-exoplanets")>]
 [<assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")>]
