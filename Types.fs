@@ -1,6 +1,7 @@
 namespace exoplanetProject
 open System
 open System.Text.Json.Serialization
+
 type Planet =
     {
         [<JsonPropertyName("pl_name")>]
@@ -16,19 +17,18 @@ type Planet =
         DistanceParsecs: float
     }
 
-type SortMode =
-    | Distance
-    | OrbitalPeriod
-    | PlanetRadius
-    | DiscoveryYear
-
-type SearchCriteria =
+type Host =
     {
-        MaximumDistanceParsecs: float option
-        MinimumDiscoveryYear: int option
-        MinimumRadiusEarths: float option
-        MaximumRadiusEarths: float option
-        MaximumOrbitalPeriodDays: float option
-        DiscoveryMethod: string option
-        SortBy: SortMode
-    }   
+        [<JsonPropertyName("hostname")>]
+        Name: string
+
+        [<JsonPropertyName("sy_name")>]
+        SystemName: string
+
+        [<JsonPropertyName("sy_pnum")>]
+        NumberOfPlanets: int
+
+        [<JsonPropertyName("sy_mnum")>]
+        NumberOfMoons: int
+
+    }
