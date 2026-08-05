@@ -10,7 +10,7 @@ type searchOptions =
 let defaultOptions = 
     {
         Select = ["pl_name"]
-        Range = (0, 100)
+        Range = (0, 10)
         WhereClause = None
         OrderBy = None
     }

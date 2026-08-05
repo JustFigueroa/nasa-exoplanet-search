@@ -5,19 +5,19 @@ open System.Text.Json
 open System.Text.Json.Serialization
 
 
-let query =
+let defaultQuery =
     "SELECT TOP 5 pl_name, hostname, pl_orbper, sy_dist " +
     "FROM pscomppars " +
     "WHERE pl_orbper IS NOT NULL AND sy_dist IS NOT NULL " +
     "ORDER BY sy_dist"
 
 
+
 let endpoint =
     "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"
 
-
 let buildRequestUrl () =
-    let encodedQuery = Uri.EscapeDataString(query)
+    let encodedQuery = Uri.EscapeDataString(defaultQuery)
 
     $"{endpoint}?query={encodedQuery}&format=json"
 

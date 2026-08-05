@@ -1,11 +1,8 @@
-module exoplanetProject.Main
-open exoplanetProject.QuerySubmit
+﻿module exoplanetProject.Program
 open System
 
 [<EntryPoint>]
-
-let main args =
-
+let main _ =
     try
         let planets =
             fetchPlanets().GetAwaiter().GetResult()

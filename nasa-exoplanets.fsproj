@@ -9,7 +9,6 @@
   <ItemGroup>
     <Compile Include="ArgHandler.fs" />
     <Compile Include="Types.fs" />
-    <Compile Include="QueryBuild.fs" />
     <Compile Include="QuerySubmit.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>

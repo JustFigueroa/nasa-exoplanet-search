@@ -1,18 +1,17 @@
 ---------------------
 NASA EXOPLANET SEARCH
 ---------------------
-*This program is used to search and return planetary data based on NASA's Planetary Systems Composite Parameter Table
-*The users search criteria is passed as program arguments based on ADQL the following parameters:
+> This program is used to search and return planetary data based on NASA's Planetary Systems Composite Parameter Table
+> The users search criteria is passed as program arguments based on ADQL the following parameters:
 -------
 Options
 -------
--s or --select 
--r or --range 
--w or --where 
--o or --order 
+--select
+[--sort <Column to sort by> <Ascending or Descending>]
+[--range <First Row> <Last Row>]
 -----------------
 Example execution
 -----------------
-Program -range 0-5 -s pl_name -w sy_dist < 200 -o sy_dist 
------------------
-*In this example, the user requests the first five planets whose systems are within 200 parsecs of Earth. The results display each planet's name and are sorted by distance from Earth
+./nasasearch --select PlanetName DistanceParsecs --sort DistanceParsecs Ascending --range 0 19
+----------------
+> In this example the program will return the name and distance of 20 planets  sorted in ascending order by distance: The nearest 20 exoplanets to earth
