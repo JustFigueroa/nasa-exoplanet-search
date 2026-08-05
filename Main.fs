@@ -3,7 +3,8 @@ open exoplanetProject.QuerySubmit
 open System
 
 [<EntryPoint>]
-let main _ =
+
+let main args =
     try
         let planets =
             fetchPlanets().GetAwaiter().GetResult()
