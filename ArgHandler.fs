@@ -1,18 +1,15 @@
-module exoplanetProject.ArgHandler
+module ExoplanetArgumentHandler
+open exoplanetQuery
+open System
 
-type searchOptions = 
+let query = 
     {
-        Select: string list
-        Range: int*int
-        WhereClause: string option
-        OrderBy: string option
+        Select = 
+            [
+                PlanetName
+                HostStar
+                OrbitalPeriodDays
+                DistanceParsecs
+            ]
+        SortyBy = None
     }
-let defaultOptions = 
-    {
-        Select = ["pl_name"]
-        Range = (0, 10)
-        WhereClause = None
-        OrderBy = None
-    }
-let parseArgs (args: string array) =
-        defaultOptions

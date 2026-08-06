@@ -1,4 +1,4 @@
-namespace exoplanetProject
+namespace ExoplanetPlanets
 open System
 open System.Text.Json.Serialization
 
@@ -15,20 +15,4 @@ type Planet =
 
         [<JsonPropertyName("sy_dist")>]
         DistanceParsecs: float
-    }
-
-type Host =
-    {
-        [<JsonPropertyName("hostname")>]
-        Name: string
-
-        [<JsonPropertyName("sy_name")>]
-        SystemName: string
-
-        [<JsonPropertyName("sy_pnum")>]
-        NumberOfPlanets: int
-
-        [<JsonPropertyName("sy_mnum")>]
-        NumberOfMoons: int
-
     }
