@@ -18,14 +18,6 @@ type SortDirection =
     | Ascending
     | Descending
 
-//Groups the range values into one value
-//Used to get specific range of rows
-//Demonstates F# records
-type rowRange =
-    {
-        first: int
-        last: int
-    }
 
 //This is the user query
 //Distance SortBy and Limit are optional
@@ -86,7 +78,7 @@ let endpoint =
     "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"
 
 //Builds the request url
-let buildRequestUrl queryText =
+let buildRequestUrl (queryText: string) =
     let encodedQuery = Uri.EscapeDataString(queryText)
 
     $"{endpoint}?query={encodedQuery}&format=json"

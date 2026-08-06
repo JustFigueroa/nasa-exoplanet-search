@@ -1,14 +1,13 @@
 module ExoplanetMain
 open ExoplanetQuery
 open ExoplanetPlanets
+open ExoplanetArgumentHandler
 open System
 
 [<EntryPoint>]
     
 let main args =
-
     try
-        let main args = 
             match parseArguments args with
             | Ok query ->
                 try
@@ -22,6 +21,7 @@ let main args =
                     for planet in planets do
                         let distanceLightYears =
                             planet.DistanceParsecs * 3.26156
+                        
                         printfn "%s" planet.Name
                         printfn "  Host star: %s" planet.HostStar
                         printfn "  Orbital period: %.2f days" planet.OrbitalPeriodDays
