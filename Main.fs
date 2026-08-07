@@ -20,13 +20,21 @@ let main args =
 
                     for planet in planets do
                         let distanceLightYears =
-                            planet.DistanceParsecs * 3.26156
+                            match planet.DistanceParsecs with
+                            | Some distance -> distance * 3.26156
+                            | None -> 0.0
+
                         
                         printfn "%s" planet.Name
                         printfn "  Host star: %s" planet.HostStar
-                        printfn "  Orbital period: %.2f days" planet.OrbitalPeriodDays
-                        printfn "  Distance: %.2f parsecs" planet.DistanceParsecs
-                        printfn "  Distance: %.2f light-years\n" distanceLightYears
+                        match planet.OrbitalPeriodDays with
+                        | Some days -> printfn "  Orbital period: %.2f days" days
+                        | None -> printfn " Orbital Period: Unknown"
+                        match planet.DistanceParsecs with
+                        | Some distance -> 
+                            printfn "  Distance: %.2f parsecs" distance
+                            printfn "  Distance: %.2f light-years\n" distanceLightYears
+                        | None -> printfn "  Distance: Unknown"
                     0
                 with
                 | ex ->

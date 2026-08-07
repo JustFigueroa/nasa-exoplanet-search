@@ -1,6 +1,6 @@
 namespace ExoplanetPlanets
-open System
 open System.Text.Json.Serialization
+open System
 
 type Planet =
     {
@@ -11,8 +11,8 @@ type Planet =
         HostStar: string
 
         [<JsonPropertyName("pl_orbper")>]
-        OrbitalPeriodDays: float
+        OrbitalPeriodDays: float option
 
         [<JsonPropertyName("sy_dist")>]
-        DistanceParsecs: float
+        DistanceParsecs: float option
     }
