@@ -19,22 +19,22 @@ let main args =
                     printfn "Exoplanet systems returned by NASA:\n"
 
                     for planet in planets do
-                        let distanceLightYears =
-                            match planet.DistanceParsecs with
-                            | Some distance -> distance * 3.26156
-                            | None -> 0.0
-
-                        
                         printfn "%s" planet.Name
-                        printfn "  Host star: %s" planet.HostStar
-                        match planet.OrbitalPeriodDays with
-                        | Some days -> printfn "  Orbital period: %.2f days" days
-                        | None -> printfn " Orbital Period: Unknown"
-                        match planet.DistanceParsecs with
-                        | Some distance -> 
-                            printfn "  Distance: %.2f parsecs" distance
-                            printfn "  Distance: %.2f light-years\n" distanceLightYears
-                        | None -> printfn "  Distance: Unknown"
+                        if List.contains HostStar query.Select then
+                            printfn "  Host star: %s" planet.HostStar
+                        if List.contains OrbitalPeriodDays query.Select then
+                            match planet.OrbitalPeriodDays with
+                            | Some days -> printfn "  Orbital period: %.2f days" days
+                            | None -> printfn " Orbital Period: Unknown"
+                        if List.contains DistanceParsecs query.Select then
+                            match planet.DistanceParsecs with
+                                | Some distance -> 
+                                    let distanceLightYears =
+                                        distance * 3.26156
+                                    printfn "  Distance: %.2f parsecs" distance
+                                    printfn "            %.2f light-years" distanceLightYears
+                                | None -> printfn "  Distance: Unknown"
+                        printfn "\n"
                     0
                 with
                 | ex ->
