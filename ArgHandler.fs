@@ -13,4 +13,4 @@ let parseArguments (args: string array) : Result<Query, string> =
     |> Array.iteri (fun index argument ->
         printfn "Argument %d: %s" index argument)
 
-    Error "Argument parsing is not implemented yet."By }
+    Error "Argument parsing is not implemented yet."
