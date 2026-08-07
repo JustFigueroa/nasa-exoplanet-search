@@ -20,7 +20,7 @@ type SortDirection =
 
 
 //This is the user query
-//Distance SortBy and Limit are optional
+//Sortby is optional
 type Query = 
     {
         Select: Column list
@@ -38,7 +38,6 @@ let private columnName column =
 
 //This will create the SELECT clause
 //Takes the list of desired columns and concatenates or * if none
-
 let private buildSelect columns =
     match columns with 
     | [] ->
